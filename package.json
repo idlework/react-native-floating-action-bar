@@ -30,7 +30,9 @@
     "react-native-vector-icons": "^6.6.0"
   },
   "devDependencies": {
+    "@react-native-community/eslint-config": "^0.0.7",
     "eslint": "^6.8.0",
+    "eslint-plugin-prettier": "^3.1.2",
     "husky": "^4.2.3",
     "prettier": "^2.0.1",
     "pretty-quick": "^2.0.1"
