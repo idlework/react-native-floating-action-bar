@@ -81,13 +81,14 @@ Accepts an array with objects. The object is used to generate and style the acti
   icon: 'taxi',
   color: 'rgb(130, 130, 130)',
   activeColor: 'rgb(3, 137, 253)',
-  activeBackgroundColor: 'rgb(224, 243, 255)'
+  activeBackgroundColor: 'rgb(224, 243, 255)',
 }
 ```
 
 ### position
 
 Accepts a string containing one of these types: `top`, `bottom`, `left`, `right`.
+This property positions the action bar to the given position. With `top` or `bottom` the ation bar renders as a row, with `left` or `right` the action bar renders as a column.
 
 ### onPress
 
@@ -99,7 +100,7 @@ Accepts an int. Can be used to set initial index.
 
 ### style
 
-Accepts an StyleSheet style or an object. This allows you to style the container.
+Accepts a StyleSheet style or an object. This allows you to style the container.
 
 
 ## Contributing
