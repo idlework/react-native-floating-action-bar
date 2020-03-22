@@ -15,7 +15,7 @@
     "floating"
   ],
   "author": "Johan Haneveld",
-  "license": "ISC",
+  "license": "MIT",
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged; ./scripts/pre-commit-lint.sh"
