@@ -1,39 +1,42 @@
 # react-native-floating-action-bar
-A React Native floating action bar. 
+
+A React Native floating action bar.
+
+![How it looks](assets/screenshot.png)
 
 ## Installation
 
-*npm*
+_npm_
+
 ```shell
 $ npm i react-native-floating-action-bar --save
 ```
 
-*yarn*
+_yarn_
+
 ```shell
 $ yarn add react-native-floating-action-bar
 ```
 
 ## Usage
 
-*import*
+_import_
+
 ```javascript
-import FloatingActionBar from 'react-native-floating-action-bar'
+import FloatingActionBar from 'react-native-floating-action-bar';
 ```
 
-*basic*
+_basic_
+
 ```javascript
 <FloatingActionBar
-  items={[
-    {icon: 'taxi'},
-    {icon: 'subway'},
-    {icon: 'train'},
-    {icon: 'bus'},
-  ]}
+  items={[{icon: 'taxi'}, {icon: 'subway'}, {icon: 'train'}, {icon: 'bus'}]}
   onPress={handlePress}
 />
 ```
 
-*maxed out*
+_maxed out_
+
 ```javascript
 <FloatingActionBar
   items={[
@@ -75,7 +78,8 @@ import FloatingActionBar from 'react-native-floating-action-bar'
 
 Accepts an array with objects. The object is used to generate and style the action bar items.
 
-*item interface*
+_item interface_
+
 ```
 {
   icon: 'taxi',
@@ -96,12 +100,11 @@ Accepts a function. returns the selected index.
 
 ### selectedIndex
 
-Accepts an int. Can be used to set initial index. 
+Accepts an int. Can be used to set initial index.
 
 ### style
 
 Accepts a StyleSheet style or an object. This allows you to style the container.
-
 
 ## Contributing
 
