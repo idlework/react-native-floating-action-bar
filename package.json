@@ -2,7 +2,7 @@
   "name": "react-native-floating-action-bar",
   "version": "1.0.0",
   "description": "A React Native floating action bar.",
-  "main": "index.js",
+  "main": "src/FloatingActionBar.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,5 +13,13 @@
     "floating"
   ],
   "author": "Johan Haneveld",
-  "license": "ISC"
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-native": "^0.61.5"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react-native-vector-icons": "^6.6.0"
+  }
 }
