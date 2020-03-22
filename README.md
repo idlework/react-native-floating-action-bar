@@ -67,8 +67,9 @@ _maxed out_
       activeBackgroundColor: 'rgb(224, 243, 255)',
     },
   ]}
-  position="bottom"
+  offset={50}
   onPress={handlePress}
+  position="bottom"
   selectedIndex={0}
   style={styles.floatingActionBar}
 />
