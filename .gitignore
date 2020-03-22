@@ -8,11 +8,11 @@
 *.zip
 report.xml
 .vscode/
-*/ios/Pods/
+ios/Pods/
 
 # Node #
 ###########
-*/node_modules/
+node_modules/
 npm-debug.log
 yarn-error.log
 
