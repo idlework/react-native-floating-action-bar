@@ -2,7 +2,9 @@
 
 A React Native floating action bar.
 
-![How it looks](assets/screenshot.png)
+|                   Horizontal action bar                    |                  Vertical action bar                   |
+| :--------------------------------------------------------: | :----------------------------------------------------: |
+| ![Horizontal action bar](assets/horizontal-action-bar.png) | ![Vertical action bar](assets/vertical-action-bar.png) |
 
 ## Installation
 
@@ -96,7 +98,7 @@ Accepts a number. Offsets the action bar by given number.
 ### position
 
 Accepts a string containing one of these types: `top`, `bottom`, `left`, `right`.
-This property positions the action bar to the given position. With `top` or `bottom` the ation bar renders as a row, with `left` or `right` the action bar renders as a column.
+This property positions the action bar to the given position. With `top` or `bottom` the action bar renders as a row, with `left` or `right` the action bar renders as a column.
 
 ### onPress
 
