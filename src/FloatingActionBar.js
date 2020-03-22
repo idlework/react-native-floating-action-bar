@@ -5,8 +5,8 @@ import FloatingActionButton from './FloatingActionButton';
 import FloatingActionIndicator from './FloatingActionIndicator';
 
 const FloatingActionBar = ({
-  distance,
   items,
+  offset,
   onPress,
   position,
   selectedIndex,
@@ -16,7 +16,7 @@ const FloatingActionBar = ({
   const selectedItem = items[selectedIndex];
   const size = getSize(position);
   return (
-    <View style={[styles.container, getPositions(position, distance)]}>
+    <View style={[styles.container, getPositions(position, offset)]}>
       <View style={[styles.content, style]}>
         <View style={[getDirection(position)]}>
           <FloatingActionIndicator
@@ -45,17 +45,17 @@ const FloatingActionBar = ({
   );
 };
 
-const getPositions = (position, distance) => {
+const getPositions = (position, offset) => {
   switch (position) {
     case 'top':
       return {
-        top: distance,
+        top: offset,
         left: 0,
         right: 0,
       };
     case 'bottom':
       return {
-        bottom: distance,
+        bottom: offset,
         left: 0,
         right: 0,
       };
@@ -63,13 +63,13 @@ const getPositions = (position, distance) => {
       return {
         top: 0,
         bottom: 0,
-        left: distance,
+        left: offset,
       };
     case 'right':
       return {
         top: 0,
         bottom: 0,
-        right: distance,
+        right: offset,
       };
   }
 };
@@ -126,16 +126,16 @@ const styles = StyleSheet.create({
 });
 
 FloatingActionBar.propTypes = {
-  distance: PropTypes.number,
   items: PropTypes.array,
+  offset: PropTypes.number,
   onPress: PropTypes.func,
   position: PropTypes.string,
   selectedIndex: PropTypes.number,
 };
 
 FloatingActionBar.defaultProps = {
-  distance: 50,
   items: [],
+  offset: 50,
   onPress: (_) => null,
   position: 'bottom',
   selectedIndex: 0,

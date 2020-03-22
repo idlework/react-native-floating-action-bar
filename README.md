@@ -89,6 +89,10 @@ _item interface_
 }
 ```
 
+### offset
+
+Accepts a number. Offsets the action bar by given number.
+
 ### position
 
 Accepts a string containing one of these types: `top`, `bottom`, `left`, `right`.
