@@ -4,7 +4,9 @@
   "description": "A React Native floating action bar.",
   "main": "src/FloatingActionBar.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "pretty-quick": "pretty-quick"
   },
   "keywords": [
     "react-native",
@@ -14,6 +16,11 @@
   ],
   "author": "Johan Haneveld",
   "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged; ./scripts/pre-commit-lint.sh"
+    }
+  },
   "peerDependencies": {
     "react": "^16.13.1",
     "react-native": "^0.61.5"
@@ -21,5 +28,11 @@
   "dependencies": {
     "prop-types": "^15.7.2",
     "react-native-vector-icons": "^6.6.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "husky": "^4.2.3",
+    "prettier": "^2.0.1",
+    "pretty-quick": "^2.0.1"
   }
 }
