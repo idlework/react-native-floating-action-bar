@@ -18,7 +18,7 @@ const FloatingActionButton = ({
     <TouchableOpacity
       style={[styles.container, style, {width, height}]}
       onPress={onPress}>
-      <Icon name={icon} size={size} color={active ? activeColor : color} />
+        { typeof icon == "string" ? <Icon name={icon} size={size} color={active ? activeColor : color} /> : icon({ size, color: active ? activeColor : color})}
     </TouchableOpacity>
   );
 };
@@ -35,7 +35,10 @@ FloatingActionButton.propTypes = {
   activeColor: PropTypes.string,
   color: PropTypes.string,
   height: PropTypes.number,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func
+  ]),
   onPress: PropTypes.func,
   size: PropTypes.number,
   width: PropTypes.number,
