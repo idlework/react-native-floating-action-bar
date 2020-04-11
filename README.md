@@ -96,6 +96,18 @@ _item interface_
 }
 ```
 
+`icon` can also be a function, which passed two props: active & color. This can come in handy when you want to use another font family.
+
+{
+  icon: ({ color, size }) => (
+    <Icon name="compass" size={size} color={color} />
+  ),
+  color: "rgb(130, 130, 130)",
+  activeColor: "rgb(3, 137, 253)",
+  activeBackgroundColor: "rgb(224, 243, 255)"
+}
+
+
 ### offset
 
 Accepts a number. Offsets the action bar by given number.
@@ -115,7 +127,12 @@ Accepts an int. Can be used to set initial index.
 
 ### style
 
-Accepts a StyleSheet style or an object. This allows you to style the container.
+Accepts a StyleSheet style or an object. This allows you to style the inner container.
+
+### outerContainerStyle
+
+Accepts a StyleSheet style or an object. This allows you to style the outer container. Most useful for setting position to relative if wanted.
+
 
 ## Contributing
 
