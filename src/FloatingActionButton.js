@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const FloatingActionButton = ({
   active,
@@ -18,7 +18,7 @@ const FloatingActionButton = ({
     <TouchableOpacity
       style={[styles.container, style, {width, height}]}
       onPress={onPress}>
-      <Icon name={icon} size={size} color={active ? activeColor : color} />
+        { typeof icon == "string" ? <Icon name={icon} size={size} color={active ? activeColor : color} /> : icon({ size, color: active ? activeColor : color})}
     </TouchableOpacity>
   );
 };
@@ -35,7 +35,10 @@ FloatingActionButton.propTypes = {
   activeColor: PropTypes.string,
   color: PropTypes.string,
   height: PropTypes.number,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number
+  ]),
   onPress: PropTypes.func,
   size: PropTypes.number,
   width: PropTypes.number,
