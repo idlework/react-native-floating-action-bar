@@ -37,7 +37,7 @@ FloatingActionButton.propTypes = {
   height: PropTypes.number,
   icon: PropTypes.oneOfType([
     PropTypes.string,
-    PropTypes.number
+    PropTypes.func
   ]),
   onPress: PropTypes.func,
   size: PropTypes.number,
