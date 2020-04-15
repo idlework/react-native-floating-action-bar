@@ -13,17 +13,17 @@ const FloatingActionBar = ({
   style,
 }) => {
   const [currentIndex, setCurrentIndex] = useState(selectedIndex || 0);
-  const selectedItem = items[selectedIndex];
   const size = getSize(position);
   return (
     <View style={[styles.container, getPositions(position, offset)]}>
       <View style={[styles.content, style]}>
         <View style={[getDirection(position)]}>
           <FloatingActionIndicator
-            {...selectedItem}
+            {...items[currentIndex]}
             {...size}
             position={position}
             selectedIndex={currentIndex}
+            items={items}
           />
           {items.map((item, index) => (
             <FloatingActionButton
