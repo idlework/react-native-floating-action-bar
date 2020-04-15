@@ -136,7 +136,7 @@ FloatingActionBar.propTypes = {
 FloatingActionBar.defaultProps = {
   items: [],
   offset: 50,
-  onPress: (_) => null,
+  onPress: () => null,
   position: 'bottom',
   selectedIndex: 0,
 };

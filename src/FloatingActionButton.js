@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 const FloatingActionButton = ({
   active,
@@ -13,14 +12,20 @@ const FloatingActionButton = ({
   onPress,
   style,
   width,
-}) => {
-  return (
-    <TouchableOpacity
-      style={[styles.container, style, {width, height}]}
-      onPress={onPress}>
-      <Icon name={icon} size={size} color={active ? activeColor : color} />
-    </TouchableOpacity>
-  );
+}) => (
+  <TouchableOpacity
+    style={[styles.container, style, {width, height}]}
+    onPress={onPress}>
+    {typeof icon === 'string'
+      ? renderIcon({active, activeColor, color, icon, size})
+      : icon({active, activeColor, color, icon, size})}
+    }
+  </TouchableOpacity>
+);
+
+const renderIcon = ({active, activeColor, color, icon, size}) => {
+  const Icon = require('react-native-vector-icons/FontAwesome');
+  return <Icon name={icon} size={size} color={active ? activeColor : color} />;
 };
 
 const styles = StyleSheet.create({
@@ -35,7 +40,7 @@ FloatingActionButton.propTypes = {
   activeColor: PropTypes.string,
   color: PropTypes.string,
   height: PropTypes.number,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   onPress: PropTypes.func,
   size: PropTypes.number,
   width: PropTypes.number,
@@ -46,7 +51,7 @@ FloatingActionButton.defaultProps = {
   color: 'rgb(130, 130, 130)',
   height: 44,
   icon: 'rocket',
-  onPress: (_) => null,
+  onPress: () => null,
   size: 24,
   width: 70,
 };

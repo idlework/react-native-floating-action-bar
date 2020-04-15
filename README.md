@@ -49,19 +49,26 @@ _maxed out_
       activeBackgroundColor: 'rgb(224, 243, 255)',
     },
     {
-      icon: 'subway',
+      icon: () => <Icon name="subway" />,
       color: 'rgb(130, 130, 130)',
       activeColor: 'rgb(3, 137, 253)',
       activeBackgroundColor: 'rgb(224, 243, 255)',
     },
     {
-      icon: 'train',
+      icon: ({active}) => (
+        <Icon
+          name="train"
+          color={active ? 'rgb(3, 137, 253)' : 'rgb(130, 130, 130)'}
+        />
+      ),
       color: 'rgb(130, 130, 130)',
       activeColor: 'rgb(3, 137, 253)',
       activeBackgroundColor: 'rgb(224, 243, 255)',
     },
     {
-      icon: 'bus',
+      icon: ({active, activeColor, color, icon, size}) => (
+        <Icon name={icon} size={size} color={active ? activeColor : color} />
+      ),
       color: 'rgb(130, 130, 130)',
       activeColor: 'rgb(3, 137, 253)',
       activeBackgroundColor: 'rgb(224, 243, 255)',
@@ -85,31 +92,31 @@ _item interface_
 
 ```
 {
-  icon: 'taxi',
-  color: 'rgb(130, 130, 130)',
-  activeColor: 'rgb(3, 137, 253)',
-  activeBackgroundColor: 'rgb(224, 243, 255)',
+  icon: 'taxi' || Your own icon render function,
+  color: 'rgb(130, 130, 130)', // optional
+  activeColor: 'rgb(3, 137, 253)', // optional
+  activeBackgroundColor: 'rgb(224, 243, 255)', // optional
 }
 ```
 
-### offset
+### offset (optional)
 
 Accepts a number. Offsets the action bar by given number.
 
-### position
+### position (optional)
 
 Accepts a string containing one of these types: `top`, `bottom`, `left`, `right`.
 This property positions the action bar to the given position. With `top` or `bottom` the action bar renders as a row, with `left` or `right` the action bar renders as a column.
 
-### onPress
+### onPress (optional)
 
 Accepts a function. returns the selected index.
 
-### selectedIndex
+### selectedIndex (optional)
 
 Accepts an int. Can be used to set initial index.
 
-### style
+### style (optional)
 
 Accepts a StyleSheet style or an object. This allows you to style the container.
 
