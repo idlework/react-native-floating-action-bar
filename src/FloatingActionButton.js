@@ -24,7 +24,7 @@ const FloatingActionButton = ({
 );
 
 const renderIcon = ({active, activeColor, color, icon, size}) => {
-  const Icon = require('react-native-vector-icons/FontAwesome');
+  const Icon = require('react-native-vector-icons/FontAwesome').default;
   return <Icon name={icon} size={size} color={active ? activeColor : color} />;
 };
 
