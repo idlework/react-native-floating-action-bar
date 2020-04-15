@@ -20,6 +20,10 @@ _yarn_
 $ yarn add react-native-floating-action-bar
 ```
 
+_Additional package install_
+
+This project depends (for now) on [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons). If you dont have this package already in your project, please add this by following [react-native-vector-icons installation instructions](https://github.com/oblador/react-native-vector-icons#installation).
+
 ## Usage
 
 _import_
