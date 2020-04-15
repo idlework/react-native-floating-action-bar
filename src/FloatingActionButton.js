@@ -19,7 +19,6 @@ const FloatingActionButton = ({
     {typeof icon === 'string'
       ? renderIcon({active, activeColor, color, icon, size})
       : icon({active, activeColor, color, icon, size})}
-    }
   </TouchableOpacity>
 );
 
