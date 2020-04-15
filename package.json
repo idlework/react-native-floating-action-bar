@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "pretty-quick": "pretty-quick"
+    "pretty-quick": "pretty-quick",
+    "publish-package": "npx np"
   },
   "keywords": [
     "react-native",
