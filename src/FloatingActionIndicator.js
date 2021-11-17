@@ -9,7 +9,6 @@ const FloatingActionIndicator = ({
   selectedIndex,
   width,
 }) => {
-  LayoutAnimation.configureNext(null);
   LayoutAnimation.configureNext(ANIMATION_PRESET);
   return (
     <View
